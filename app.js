@@ -1,12 +1,13 @@
 const express = require('express');
 const logger = require('morgan');
 require('dotenv').config();
+/* eslint-disable no-unused-vars */
 const db = require('./db/db');
+/* eslint-enable no-unused-vars */
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const shopsRouter = require('./routes/shops');
-const { isAuthenticated } = require('./controllers/user.controller');
 
 const app = express();
 app.use(logger('dev'));
